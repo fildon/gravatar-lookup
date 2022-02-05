@@ -1,0 +1,22 @@
+{
+  "name": "gravatar-lookup",
+  "scripts": {
+    "clean": "shx rm -rf dist/",
+    "build": "npm run clean && npm run build:js && npm run build:static",
+    "build:js": "esbuild src/app.tsx --bundle --minify --outfile=dist/index.js",
+    "build:static": "shx cp -R ./static/* ./dist/",
+    "serve": "serve dist"
+  },
+  "devDependencies": {
+    "@types/md5": "^2.3.1",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "esbuild": "^0.14.18",
+    "md5": "^2.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "serve": "^13.0.2",
+    "shx": "^0.3.4",
+    "typescript": "^4.5.5"
+  }
+}
