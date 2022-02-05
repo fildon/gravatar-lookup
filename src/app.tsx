@@ -18,7 +18,8 @@ const App = () => {
       <h1>Gravatar Lookup</h1>
       <p>
         Enter an email address below to perform a{" "}
-        <a href="https://en.gravatar.com/">Gravatar</a> lookup
+        <a href="https://en.gravatar.com/">Gravatar</a> lookup. If no match is
+        found, an Identicon is displayed instead.
       </p>
       <form onSubmit={onSubmit}>
         <input type="text" value={inputValue} onChange={onChange}></input>
